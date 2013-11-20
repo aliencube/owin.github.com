@@ -1,146 +1,143 @@
+﻿<!doctype html>
 <html>
 <head>
     <title>OWIN &mdash; Open Web Interface for .NET</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div id="main">
+        <div id="masthead">
+            <h1>OWIN</h1>
+            <h2>Open Web Interface for .NET</h2>
+        </div>
 
-<div id="main">
-    
-<div id="masthead">
-    <h1>OWIN</h1>
-    <h2>Open Web Interface for .NET</h2>
-</div>
+        <ul id="nav">
+            <li><a href="#about">소개</a></li>
+            <li><a href="#start">시작하기</a></li>
+            <li><a href="#faq">질문/답변</a></li>
+            <li><a href="#spec">기술정의</a></li>
+            <li><a href="#extensions">확장기능</a></li>
+            <li><a href="#discuss">토론</a></li>
+            <li><a href="#projects">프로젝트</a></li>
+        </ul>
 
-<ul id="nav">
-    <li><a href="#about">About</a></li>
-    <li><a href="#start">Getting Started</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#spec">Specification</a></li>
-    <li><a href="#discuss">Discussion</a></li>
-    <li><a href="#projects">Projects</a></li>
-</ul>
-<div id="content">
+        <div id="content">
+            <a name="about"></a>
+            <h2>소개</h2>
 
-    <a name="about"></a>
-    <h2>About</h2>
+            <p>OWIN은 닷넷 웹서버와 웹애플리케이션 간의 표준 인터페이스를 정의합니다. OWIN의 목표는 서버와 애플리케이션을 서로 분리시키고 닷넷 웹 개발을 위해 단순한 모듈들을 개발하게끔 독려하여 열린 표준으로써 닷넷 개발 도구들의 오픈소스 생태계를 촉진하려는 것입니다.</p>
 
-    <p>OWIN defines a standard interface between .NET web servers and web applications. The goal of the OWIN interface is to decouple server and application, encourage the development of simple modules for .NET web development, and, by being an open standard, stimulate the open source ecosystem of .NET web development tools.</p>
-        
-    <a name="start"></a>
-    <h2>Getting Started</h2>
+            <a name="start"></a>
+            <h2>시작하기</h2>
 
-    <p>These projects provide documentation and resources to help you start using OWIN. If you'd like your project listed here, please post on the discussion list.</p>
+            <p>아래의 프로젝트들은 당신이 OWIN을 사용할 수 있게끔 도움을 주는 문서와 리소스들을 제공합니다. 당신의 프로젝트가 이곳에 게시되기를 원한다면 토론방에 글을 남겨주세요.</p>
 
-    <ul>
-        <li><a href="http://katanaproject.codeplex.com/documentation">Katana</a> - OWIN implementations for Microsoft servers and frameworks.</li>
-    </ul>
+            <ul>
+                <li><a href="http://katanaproject.codeplex.com/documentation">Katana</a> - Microsoft 서버와 프레임웍을 위한 OWIN 구현체</li>
+            </ul>
 
-    <a name="faq"></a>
-    <h2>FAQ</h2>
+            <a name="faq"></a>
+            <h2>질문/답변</h2>
 
-    <ul>
-        <li><a href="https://github.com/owin/owin/wiki/faq">OWIN FAQ Wiki</a></li>
-    </ul>
+            <ul>
+                <li><a href="https://github.com/owin/owin/wiki/faq">OWIN FAQ 위키</a></li>
+            </ul>
 
-    <a name="spec"></a>
-    <h2>Specification</h2>
-    
-    <ul>
-        <li>
-            <a class="version" href="/spec/owin-1.0.0.html">OWIN v1.0.0</a>
-        </li> 
-        <li>
-            <a href="/spec/history-1.0.html">Draft history</a>
-        </li>
-    </ul>
-    
-    <h2>Extensions</h2>
+            <a name="spec"></a>
+            <h2>기술정의</h2>
 
-    <ul id="extendlist">
-        <li>
-            <a class="version" href="/spec/CommonKeys.html">Common Keys</a>
-            <p class="summary">Guidelines for exending OWIN via extension keys in the various IDictionaries.</p>
-        </li>
-        <li>
-            <a class="version" href="/extensions/owin-SendFile-Extension-v0.3.0.htm">SendFile v0.3.0</a>
-            <span class="date">3 December 2012</span>
-            <p class="summary">How to send static files via OWIN.</p>
-            <a href="/extensions/owin-SendFile-Extension-v0.2.0.htm">SendFile v0.2.0</a>
-            <span class="date">28 September 2012</span>
-            <br>
-            <a href="/extensions/owin-SendFile-Extension-v0.1.0.htm">SendFile v0.1.0</a>
-            <span class="date">17 September 2012</span>
-            <br>
-        </li>
-        <li>
-            <a class="version" href="/extensions/owin-WebSocket-Extension-v0.4.0.htm">WebSocket v0.4.0</a>
-            <span class="date">1 October 2012</span>
-            <p class="summary">How to consume WebSockets via OWIN.</p>
-            <a href="/extensions/owin-WebSocket-Extension-v0.3.0.htm">WebSocket v0.3.0</a>
-            <span class="date">7 September 2012</span>
-            <br>
-            <a href="/extensions/owin-WebSocket-Extension-v0.2.0.htm">WebSocket v0.2.0</a>
-            <span class="date">13 August 2012</span>
-        </li>
-        <li>
-            <a class="version" href="/extensions/owin-OpaqueStream-Extension-v0.3.0.htm">Opaque Streaming v0.3.0</a>
-            <span class="date">4 January 2013</span>
-            <p class="summary">How to get access to opaque streams via OWIN.</p>
-            <a href="/extensions/owin-OpaqueStream-Extension-v0.2.0.htm">Opaque Streaming v0.2.0</a>
-            <span class="date">28 September 2012</span>
-        </li>
-    </ul>
+            <ul>
+                <li><a class="version" href="/spec/owin-1.0.0.html">OWIN v1.0.0</a></li>
+                <li><a href="/spec/history-1.0.html">초안 기록들</a></li>
+            </ul>
 
+            <a name="extensions"></a>
+            <h2>확장기능</h2>
 
-    <a name="discuss"></a>
-    <h2>Discussion</h2>
+            <ul id="extendlist">
+                <li>
+                    <a class="version" href="/spec/CommonKeys.html">Common Keys</a>
+                    <p class="summary">다양한 IDictionaries의 확장 키를 통해 OWIN 확장이 가능할 수 있게끔 해주는 가이드라인</p>
+                </li>
+                <li>
+                    <a class="version" href="/extensions/owin-SendFile-Extension-v0.3.0.htm">SendFile v0.3.0</a>
+                    <span class="date">2012-12-03</span>
+                    <p class="summary">OWIN을 통해 정적 파일을 보낼 수 있는 방법</p>
+                    <a href="/extensions/owin-SendFile-Extension-v0.2.0.htm">SendFile v0.2.0</a>
+                    <span class="date">2012-09-28</span>
+                    <br>
+                    <a href="/extensions/owin-SendFile-Extension-v0.1.0.htm">SendFile v0.1.0</a>
+                    <span class="date">2012-09-17</span>
+                    <br>
+                </li>
+                <li>
+                    <a class="version" href="/extensions/owin-WebSocket-Extension-v0.4.0.htm">WebSocket v0.4.0</a>
+                    <span class="date">2012-10-01</span>
+                    <p class="summary">OWIN을 통해 웹 소켓을 이용하는 방법</p>
+                    <a href="/extensions/owin-WebSocket-Extension-v0.3.0.htm">WebSocket v0.3.0</a>
+                    <span class="date">2012-09-07</span>
+                    <br>
+                    <a href="/extensions/owin-WebSocket-Extension-v0.2.0.htm">WebSocket v0.2.0</a>
+                    <span class="date">2012-08-13</span>
+                </li>
+                <li>
+                    <a class="version" href="/extensions/owin-OpaqueStream-Extension-v0.3.0.htm">Opaque Streaming v0.3.0</a>
+                    <span class="date">2013-01-04</span>
+                    <p class="summary">OWIN을 통해 Opaque에 접근하는 방법</p>
+                    <a href="/extensions/owin-OpaqueStream-Extension-v0.2.0.htm">Opaque Streaming v0.2.0</a>
+                    <span class="date">2012-09-28</span>
+                </li>
+            </ul>
 
-    Discuss OWIN on the <a href="http://groups.google.com/group/net-http-abstractions">.NET HTTP Abstractions</a></li> list.</p>
-    
-    You can also join the <a href="http://jabbr.net/#/rooms/owin">chat room</a> to discuss owin.
+            <a name="discuss"></a>
+            <h2>토론</h2>
 
-    <h2>Wiki</h2>
-    You can find more project information on the <a href="https://github.com/owin/owin/wiki">wiki</a>.
+            <p>OWIN에 대한 토론은 <a href="http://groups.google.com/group/net-http-abstractions">.NET HTTP Abstractions</a> 리스트에서 진행됩니다.</p>
+            <p><a href="http://jabbr.net/#/rooms/owin">채팅방</a>에도 참가하여 OWIN에 대해 토론할 수 있습니다.</p>
 
-    <a name="projects"></a>
-    <h2>Projects</h2>
-    
-    <p>These projects are known to be OWIN-compatible. If you'd like your project listed here, please post on the discussion list.</p>
-    
-    <h3>Servers and Hosts</h3>
+            <a name="wiki"></a>
+            <h2>위키</h2>
 
-    <ul>
-        <li><a href="http://katanaproject.codeplex.com/">Katana</a></li>
-        <li><a href="https://github.com/Bobris/Nowin">Nowin</a></li>
-    </ul>
-    
-    <h3>Frameworks</h3>
-    
-    <ul>
-        <li><a href="http://nancyfx.org">Nancy</a></li>
-        <li><a href="http://signalr.net/">SignalR</a></li>
-        <li><a href="https://aspnetwebstack.codeplex.com/">WebApi</a></li>
-        <li><a href="http://mvc.fubu-project.org/">FubuMVC</a></li>
-        <li><a href="http://github.com/markrendle/Simple.Web">Simple.Web</a></li>
-        <li><a href="http://github.com/duovia/duovia-http">DuoVia.Http</a></li>
-    </ul>
-    
-    <h3>Other</h3>
-    <ul>
-        <li><a href="http://github.com/markrendle/fix">Fix</a></li>
-    </ul>
+            <p>프로젝트에 대한 더 많은 정보들은 <a href="https://github.com/owin/owin/wiki">위키</a>에서 확인이 가능합니다.</p>
 
-    <h3>Out of date or depricated</h3>
-    <ul>
-        <li><a href="http://github.com/panesofglass/frack">Frack</a></li>
-        <li><a href="http://github.com/kayak/kayak">Kayak</a></li>
-        <li><a href="http://github.com/remi/knack">Knack</a></li>
-        <li><a href="https://github.com/FireflyServer/firefly">Firefly</a></li>
-        <li><a href="http://github.com/owin/gate">Gate</a></li>
-    </ul>
+            <a name="projects"></a>
+            <h2>프로젝트</h2>
 
-</div>
-</div>
+            <p>이 프로젝트들은 OWIN과 호환이 가능하다고 알려져 있습니다. 당신의 프로젝트가 이곳에 게시되기를 원한다면 토론방에 글을 남겨주세요.</p>
+
+            <h3>서버/호스트</h3>
+
+            <ul>
+                <li><a href="http://katanaproject.codeplex.com/">Katana</a></li>
+                <li><a href="https://github.com/Bobris/Nowin">Nowin</a></li>
+            </ul>
+
+            <h3>프레임워크</h3>
+
+            <ul>
+                <li><a href="http://nancyfx.org">Nancy</a></li>
+                <li><a href="http://signalr.net/">SignalR</a></li>
+                <li><a href="https://aspnetwebstack.codeplex.com/">WebApi</a></li>
+                <li><a href="http://mvc.fubu-project.org/">FubuMVC</a></li>
+                <li><a href="http://github.com/markrendle/Simple.Web">Simple.Web</a></li>
+                <li><a href="http://github.com/duovia/duovia-http">DuoVia.Http</a></li>
+            </ul>
+
+            <h3>기타</h3>
+            <ul>
+                <li><a href="http://github.com/markrendle/fix">Fix</a></li>
+            </ul>
+
+            <h3>종료된 프로젝트</h3>
+            <ul>
+                <li><a href="http://github.com/panesofglass/frack">Frack</a></li>
+                <li><a href="http://github.com/kayak/kayak">Kayak</a></li>
+                <li><a href="http://github.com/remi/knack">Knack</a></li>
+                <li><a href="https://github.com/FireflyServer/firefly">Firefly</a></li>
+                <li><a href="http://github.com/owin/gate">Gate</a></li>
+
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
